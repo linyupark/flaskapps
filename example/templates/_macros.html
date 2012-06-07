@@ -1,0 +1,12 @@
+{% macro render_errors(field) %}
+{% if field.errors %}
+<span class="errors">
+    {% for error in field.errors %}
+    {{ error }}{% if not loop.last %},{% endif %}
+    {% endfor %}
+</span>
+{% endif %}
+{% endmacro %}
+
+
+

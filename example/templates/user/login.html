@@ -1,0 +1,24 @@
+{% from '_macros.html' import render_errors %}
+
+{% include '_flash.html' %}
+
+<form method="POST" action="">
+    {{ form.csrf }}
+    
+    <div>
+        <label>{{ form.account.label}}</label><br />
+        {{ form.account(size=30) }} {{ render_errors(form.account) }}
+    </div>
+    
+    <div>
+        <label>{{ form.password.label}}</label><br />
+        {{ form.password(size=30) }} {{ render_errors(form.password) }}
+    </div>
+    
+    <div>
+        {{ form.remember(checked=checked) }}
+        <label>{{ form.remember.label}}</label>
+    </div>
+    
+    <input type="submit" value="登录" />
+</form>

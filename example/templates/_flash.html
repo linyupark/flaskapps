@@ -1,0 +1,16 @@
+<style type="text/css">
+.flash_msg{font-size:12px; list-style-position:inside}
+.flash_msg .success{ color:green }
+.flash_msg .warning{ color:orange }
+.flash_msg .error{ color:red }
+.flash_msg .info{ color:blue }
+</style>
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul class="flash_msg">
+    {% for category, message in messages %}
+      <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %}
