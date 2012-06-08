@@ -7,7 +7,7 @@ class Base(object):
     SECRET_KEY = 'example_secret_key'
     
     # upload
-    UPLOADS_DEFAULT_DEST = 'static/uploads/'
+    UPLOADS_DEFAULT_DEST = 'example/static/uploads/'
     UPLOADS_DEFAULT_URL = 'uploads/'
     UPLOADS_MAXSIZE = 8*1024*1024
 

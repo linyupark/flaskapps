@@ -10,6 +10,9 @@ app.config.from_object(settings.Dev)
 from user.views import user
 app.register_blueprint(user, url_prefix='/u')
 
+from system.views import sys
+app.register_blueprint(sys, url_prefix='/sys')
+
 
 # DB设定
 from extensions import db
